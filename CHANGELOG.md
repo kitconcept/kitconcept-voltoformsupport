@@ -8,3 +8,10 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.0.0a1 (2026-02-25)
+
+
+### New features:
+
+- Re-packaged backend from 4.x.x branch of volto-form-block. @davisagli

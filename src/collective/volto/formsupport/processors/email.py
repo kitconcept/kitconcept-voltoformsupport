@@ -63,13 +63,15 @@ class EmailFormProcessor:
         mfrom = self.get_sender()
         message = self.prepare_message()
         text_message = (
-            portal_transforms.convertTo("text/plain", message, mimetype="text/html")
+            portal_transforms
+            .convertTo("text/plain", message, mimetype="text/html")
             .getData()
             .strip()
         )
         admin_message = self.prepare_message(True)
         admin_text_message = (
-            portal_transforms.convertTo("text/plain", message, mimetype="text/html")
+            portal_transforms
+            .convertTo("text/plain", message, mimetype="text/html")
             .getData()
             .strip()
         )

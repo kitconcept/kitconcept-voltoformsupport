@@ -41,7 +41,8 @@ class ValidateEmailMessage(Service):
         msg = EmailMessage(policy=policy.SMTP)
 
         msg.set_content(
-            portal_transforms.convertTo("text/plain", content, mimetype="text/html")
+            portal_transforms
+            .convertTo("text/plain", content, mimetype="text/html")
             .getData()
             .strip(),
             cte=CTE,

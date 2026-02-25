@@ -55,9 +55,13 @@ dependencies = [
 
 [project.optional-dependencies]
 test = [
+    "collective.honeypot",
+    "collective.MockMailHost",
+    "collective.z3cform.norobots",
     "horse-with-no-namespace",
     "plone.app.testing",
-    "plone.classicui",
+    "plone.formwidget.hcaptcha",
+    "plone.formwidget.recaptcha",
     "plone.restapi[test]",
     "pytest",
     "pytest-cov",
@@ -98,7 +102,7 @@ exclude = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/collective", "src/collective/volto"]
+packages = ["src/collective"]
 
 [tool.towncrier]
 directory = "news/"

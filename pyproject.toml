@@ -6,15 +6,18 @@ readme = "README.md"
 license = "GPL-2.0-only"
 requires-python = ">=3.10"
 authors = [
-    { name = "RedTurtle Technology, kitconcept Gmbh", email = "info@kitconcept.com" },
+    { name = "kitconcept Gmbh", email = "info@kitconcept.com" },
+    { name = "RedTurtle Technology", email = "sviluppo@redturtle.it" },
 ]
 keywords = [
     "CMS",
     "Plone",
     "Python",
+    "Volto",
+    "forms",
 ]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
     "Framework :: Plone",
     "Framework :: Plone :: 6.0",
@@ -29,17 +32,33 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "Products.CMFPlone",
-    "plone.api",
-    
     "z3c.jbot",
+    "Zope",
+    "plone.api>=1.8.4",
+    "plone.dexterity",
+    "plone.keyring",
+    "plone.i18n",
+    "plone.memoize",
+    "plone.protect",
+    "plone.registry",
+    "plone.restapi>=8.36.0",
+    "plone.schema",
+    "plone.volto",
+    "Products.GenericSetup",
+    "Products.PortalTransforms",
+    "souper.plone",
+    "click",
+    "beautifulsoup4",
+    "jsonschema",
+    "pyotp",
 ]
 
 [project.optional-dependencies]
 test = [
     "horse-with-no-namespace",
     "plone.app.testing",
-    "plone.classicui","plone.restapi[test]",
+    "plone.classicui",
+    "plone.restapi[test]",
     "pytest",
     "pytest-cov",
     "pytest-plone>=1.0.0a2",
@@ -64,7 +83,7 @@ target = "plone"
 managed = false
 
 [tool.hatch.version]
-path = "src/collective/volto/formsupport/__init__.py"
+path = "src/collective/volto/formsupport/about.py"
 
 [build-system]
 requires = ["hatchling"]
@@ -75,11 +94,11 @@ strict-naming = true
 
 [tool.hatch.build.targets.sdist]
 exclude = [
-  "/.github",
+    "/.github",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/collective"]
+packages = ["src/collective", "src/collective/volto"]
 
 [tool.towncrier]
 directory = "news/"
@@ -180,7 +199,7 @@ source_pkgs = ["collective.volto.formsupport", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/collective/volto/formsupport/locales/*.py",
+    "src/collective/volto/formsupport/locales/*.py",
 ]
 
 [tool.zest-releaser]

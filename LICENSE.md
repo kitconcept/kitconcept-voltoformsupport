@@ -1,4 +1,6 @@
-kitconcept-voltoformsupport Copyright 2026, kitconcept Gmbh
+collective.volto.formsupport Copyright 2021, RedTurtle Technology
+
+Modifications Copyright 2026, kitconcept Gmbh
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

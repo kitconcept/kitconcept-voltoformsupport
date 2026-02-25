@@ -73,7 +73,7 @@ class TestCaptchaReCaptcha:
         transaction.commit()
         assert response.status_code == 500
         assert response.json()["message"] == (
-            "No recaptcha private key configured. Go to path/to/site/@@recaptcha-settings "  # noqa: E501
+            "No recaptcha private key configured. Go to path/to/site/@@recaptcha-settings "
             "to configure."
         )
 
@@ -197,7 +197,7 @@ class TestCaptchaHCaptcha:
         transaction.commit()
         assert response.status_code == 500
         assert response.json()["message"] == (
-            "No hcaptcha private key configured. Go to path/to/site/@@hcaptcha-settings "  # noqa: E501
+            "No hcaptcha private key configured. Go to path/to/site/@@hcaptcha-settings "
             "to configure."
         )
 

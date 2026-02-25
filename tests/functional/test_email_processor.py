@@ -43,7 +43,7 @@ class TestMailSend:
         res = response.json()
         assert response.status_code == 400
         assert res["message"] == (
-            f'Block with @type "schemaForm" and id "unknown" not found in this context: {self.document_url}'  # noqa: E501
+            f'Block with @type "schemaForm" and id "unknown" not found in this context: {self.document_url}'
         )
 
         response = submit_form(
@@ -56,7 +56,7 @@ class TestMailSend:
         res = response.json()
         assert response.status_code == 400
         assert res["message"] == (
-            f'Block with @type "schemaForm" and id "text-id" not found in this context: {self.document_url}'  # noqa: E501
+            f'Block with @type "schemaForm" and id "text-id" not found in this context: {self.document_url}'
         )
 
     def test_email_not_sent_if_block_id_is_correct_but_form_data_missing(
